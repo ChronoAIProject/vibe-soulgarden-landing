@@ -35,7 +35,6 @@ export function Card({
     '-2': '-rotate-2',
   }[rotate];
 
-  const isTape = decoration === 'tape';
   const isPinOrTape = decoration === 'pin' || decoration === 'tape';
   return (
     <div
