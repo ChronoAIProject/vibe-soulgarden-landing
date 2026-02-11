@@ -4,6 +4,7 @@ import { Button } from './components/Button';
 import { Card } from './components/Card';
 import { LoadingPage } from './components/LoadingPage';
 import { ArrowRight } from 'lucide-react';
+import { SiInstagram, SiPinterest, SiTiktok } from 'react-icons/si';
 
 const LOADING_DURATION_MS = 1500;
 
@@ -43,6 +44,17 @@ export default function App() {
                 className="h-5 sm:h-6 md:h-6 w-auto object-contain max-w-[120px] sm:max-w-[140px] md:max-w-none"
               />
             </a>
+            <div className="flex flex-1 items-center justify-center gap-3 sm:gap-4 shrink-0" aria-label="Social links">
+              <a href="https://www.tiktok.com/@soulgarden.app?lang=en" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border-2 border-pencil text-pencil/80 hover:text-brand-roseAccent hover:border-brand-roseAccent transition-colors touch-manipulation" aria-label="TikTok">
+                <SiTiktok className="h-5 w-5 sm:h-5 sm:w-5" aria-hidden />
+              </a>
+              <a href="https://www.instagram.com/soulgarden.app/" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border-2 border-pencil text-pencil/80 hover:text-brand-roseAccent hover:border-brand-roseAccent transition-colors touch-manipulation" aria-label="Instagram">
+                <SiInstagram className="h-5 w-5 sm:h-5 sm:w-5" aria-hidden />
+              </a>
+              <a href="https://www.pinterest.com/appsoulgarden/" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border-2 border-pencil text-pencil/80 hover:text-brand-roseAccent hover:border-brand-roseAccent transition-colors touch-manipulation" aria-label="Pinterest">
+                <SiPinterest className="h-5 w-5 sm:h-5 sm:w-5" aria-hidden />
+              </a>
+            </div>
             <Button variant="primary" href="#get-started" className="animate-nav-cta-pulse">
               Get started
             </Button>
@@ -92,7 +104,7 @@ export default function App() {
       <section
         id="why-soulgarden"
         className="w-full"
-        style={{ background: 'radial-gradient(ellipse at center, #D9E4F7 0%, #FFFFFF 39%, #EDDCFB 100%)' }}
+        style={{ background: 'radial-gradient(ellipse 120vmin 72vmin at center, #D9E4F7 0%, #FFFFFF 39%, #EDDCFB 100%)' }}
         aria-labelledby="why-heading"
       >
         <div className="max-w-5xl mx-auto px-4 sm:px-5 md:px-6 py-12 sm:py-16 md:py-20">
@@ -162,130 +174,122 @@ export default function App() {
         </div>
       </section>
 
-      {/* How it works — one section, full-width radial gradient bg */}
+      {/* How it works + For the believers who: — merged section */}
       <section
         id="how-it-works"
         className="w-full"
-        style={{ background: 'radial-gradient(ellipse at center, #FBF5E4 0%, #FFFFFF 39%, #D9E4F7 100%)' }}
+        style={{ background: 'radial-gradient(ellipse 120vmin 72vmin at center, #FBF5E4 0%, #FFFFFF 39%, #D9E4F7 100%)' }}
       >
         <div className="max-w-5xl mx-auto px-4 sm:px-5 md:px-6 py-12 sm:py-16 md:py-20">
-        <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-pencil text-center mb-8 sm:mb-10 md:mb-12">
-          How it works
-        </h2>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-          <Card decoration="pin" tint="greenAccent" rotate={1}>
-            <div className="flex justify-center mb-3 sm:mb-4">
-              <img src="/Plant_assets/royal_seed.png" alt="Seed" className="h-20 sm:h-24 md:h-28 w-auto object-contain" />
-            </div>
-            <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
-              <span className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center border-2 border-pencil font-heading font-bold text-base sm:text-lg bg-brand-creamAccent shrink-0" style={{ borderRadius: '180px 20px 160px 20px / 20px 160px 20px 180px' }}>1</span>
-              <h3 className="font-heading text-lg sm:text-xl font-bold">Plant</h3>
-            </div>
-            <p className="font-body text-sm sm:text-base text-pencil/80">
-              Set your manifestation and send it out to the universe. Watch it turn into a beautiful plant.
-            </p>
-            <p className="font-body text-xs sm:text-sm text-pencil/60 mt-2 italic">
-              *Pro Tip: Be Delusional
-            </p>
-          </Card>
-          <Card decoration="tape" tint="roseAccent" rotate={-1}>
-            <div className="flex justify-center mb-3 sm:mb-4">
-              <img src="/Plant_assets/sproutling.png" alt="Sprout" className="h-20 sm:h-24 md:h-28 w-auto object-contain" />
-            </div>
-            <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
-              <span className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center border-2 border-pencil font-heading font-bold text-base sm:text-lg bg-brand-lightBlueAccent shrink-0" style={{ borderRadius: '180px 20px 160px 20px / 20px 160px 20px 180px' }}>2</span>
-              <h3 className="font-heading text-lg sm:text-xl font-bold">Water</h3>
-            </div>
-            <p className="font-body text-sm sm:text-base text-pencil/80">
-              Take a minute break and chant your daily affirmation with intent.
-            </p>
-            <p className="font-body text-xs sm:text-sm text-pencil/60 mt-2 italic">
-              *Hold to connect your energy
-            </p>
-          </Card>
-          <Card decoration="pin" tint="lavender" rotate={1}>
-            <div className="flex justify-center mb-3 sm:mb-4">
-              <img src="/Plant_assets/smiling_bouquet.png" alt="Bloom" className="h-20 sm:h-24 md:h-28 w-auto object-contain" />
-            </div>
-            <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
-              <span className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center border-2 border-pencil font-heading font-bold text-base sm:text-lg bg-brand-lavenderAccent shrink-0" style={{ borderRadius: '180px 20px 160px 20px / 20px 160px 20px 180px' }}>3</span>
-              <h3 className="font-heading text-lg sm:text-xl font-bold">Bloom</h3>
-            </div>
-            <p className="font-body text-sm sm:text-base text-pencil/80">
-              Your unique magical plant will fully bloom after 4 growth stages.
-            </p>
-            <p className="font-body text-xs sm:text-sm text-pencil/60 mt-2 italic">
-              *Collect them in your encyclopedia
-            </p>
-          </Card>
-        </div>
-        </div>
-      </section>
-
-      {/* For the believers who: — one section, full-width radial gradient bg */}
-      <section
-        className="w-full min-h-[50vh]"
-        style={{ background: 'radial-gradient(ellipse at center, #EDDCFB 0%, #FFFFFF 39%, #F3D3DB 100%)' }}
-      >
-        <div className="max-w-5xl mx-auto px-4 sm:px-5 md:px-6 py-12 sm:py-16 md:py-20 flex flex-col justify-center items-center">
-        <div className="flex flex-col gap-6 sm:gap-8 w-full text-center">
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-pencil">
-            For the believers who:
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-pencil text-center mb-8 sm:mb-10 md:mb-12">
+            How it works
           </h2>
-          {(() => {
-            const texts = [
-              'Don\'t want another "chore"',
-              'Want more than static vision boards or journal notebooks',
-              'Believes in magic but gets easily distracted',
-              'Want a short intentional and fun break from doom scrolling',
-            ];
-            const bubbleBg = [
-              'bg-brand-roseAccent/90',
-              'bg-brand-lightBlueAccent/80',
-              'bg-brand-lavenderAccent/80',
-              'bg-yellow-100',
-            ];
-            const plantAssets = [
-              '/Plant_assets/sunflower.png',
-              '/Plant_assets/animating_sprout.png',
-              '/Plant_assets/golden_lotus.png',
-              '/Plant_assets/flying_heart.png',
-            ];
-            const renderBubble = (i: number) => (
-              <div
-                key={i}
-                className={`relative border-2 border-pencil pl-14 sm:pl-16 md:pl-20 pr-4 sm:pr-5 md:pr-6 py-1.5 sm:py-2 md:py-2.5 ${bubbleBg[i]} w-full min-w-0 overflow-visible text-left min-h-[4.5rem] sm:min-h-[5rem] flex items-center`}
-                style={{
-                  borderRadius: '240px 20px 220px 20px / 20px 220px 20px 240px',
-                  boxShadow: '3px 3px 0px 0px rgba(45,45,45,0.12)',
-                }}
-              >
-                <img
-                  src={plantAssets[i]}
-                  alt=""
-                  aria-hidden
-                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 object-contain pointer-events-none z-10"
-                />
-                <span className="relative z-0 font-body text-xs sm:text-sm md:text-base text-pencil/90 text-left leading-snug">{texts[i]}</span>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+            <Card decoration="pin" tint="greenAccent" rotate={1}>
+              <div className="flex justify-center mb-3 sm:mb-4">
+                <img src="/Plant_assets/royal_seed.png" alt="Seed" className="h-20 sm:h-24 md:h-28 w-auto object-contain" />
               </div>
-            );
-            return (
-              <div className="grid grid-cols-2 gap-x-10 gap-y-3 sm:gap-x-12 sm:gap-y-4 md:gap-x-16">
-                {renderBubble(0)}
-                {renderBubble(1)}
-                {renderBubble(2)}
-                {renderBubble(3)}
+              <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+                <span className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center border-2 border-pencil font-heading font-bold text-base sm:text-lg bg-brand-creamAccent shrink-0" style={{ borderRadius: '180px 20px 160px 20px / 20px 160px 20px 180px' }}>1</span>
+                <h3 className="font-heading text-lg sm:text-xl font-bold">Plant</h3>
               </div>
-            );
-          })()}
-        </div>
+              <p className="font-body text-sm sm:text-base text-pencil/80">
+                Set your manifestation and send it out to the universe. Watch it turn into a beautiful plant.
+              </p>
+              <p className="font-body text-xs sm:text-sm text-pencil/60 mt-2 italic">
+                *Pro Tip: Be Delusional
+              </p>
+            </Card>
+            <Card decoration="tape" tint="roseAccent" rotate={-1}>
+              <div className="flex justify-center mb-3 sm:mb-4">
+                <img src="/Plant_assets/sproutling.png" alt="Sprout" className="h-20 sm:h-24 md:h-28 w-auto object-contain" />
+              </div>
+              <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+                <span className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center border-2 border-pencil font-heading font-bold text-base sm:text-lg bg-brand-lightBlueAccent shrink-0" style={{ borderRadius: '180px 20px 160px 20px / 20px 160px 20px 180px' }}>2</span>
+                <h3 className="font-heading text-lg sm:text-xl font-bold">Water</h3>
+              </div>
+              <p className="font-body text-sm sm:text-base text-pencil/80">
+                Take a minute break and chant your daily affirmation with intent.
+              </p>
+              <p className="font-body text-xs sm:text-sm text-pencil/60 mt-2 italic">
+                *Hold to connect your energy
+              </p>
+            </Card>
+            <Card decoration="pin" tint="lavender" rotate={1}>
+              <div className="flex justify-center mb-3 sm:mb-4">
+                <img src="/Plant_assets/smiling_bouquet.png" alt="Bloom" className="h-20 sm:h-24 md:h-28 w-auto object-contain" />
+              </div>
+              <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+                <span className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center border-2 border-pencil font-heading font-bold text-base sm:text-lg bg-brand-lavenderAccent shrink-0" style={{ borderRadius: '180px 20px 160px 20px / 20px 160px 20px 180px' }}>3</span>
+                <h3 className="font-heading text-lg sm:text-xl font-bold">Bloom</h3>
+              </div>
+              <p className="font-body text-sm sm:text-base text-pencil/80">
+                Your unique magical plant will fully bloom after 4 growth stages.
+              </p>
+              <p className="font-body text-xs sm:text-sm text-pencil/60 mt-2 italic">
+                *Collect them in your encyclopedia
+              </p>
+            </Card>
+          </div>
+
+          <div className="flex flex-col gap-6 sm:gap-8 w-full text-center mt-16 sm:mt-20 md:mt-24">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-pencil">
+              For the believers who:
+            </h2>
+            {(() => {
+              const texts = [
+                'Don\'t want another "chore"',
+                'Want more than static vision boards or journal notebooks',
+                'Believes in magic but gets easily distracted',
+                'Want a short intentional and fun break from doom scrolling',
+              ];
+              const bubbleBg = [
+                'bg-brand-roseAccent/90',
+                'bg-brand-lightBlueAccent/80',
+                'bg-brand-lavenderAccent/80',
+                'bg-yellow-100',
+              ];
+              const plantAssets = [
+                '/Plant_assets/sunflower.png',
+                '/Plant_assets/animating_sprout.png',
+                '/Plant_assets/golden_lotus.png',
+                '/Plant_assets/flying_heart.png',
+              ];
+              const renderBubble = (i: number) => (
+                <div
+                  key={i}
+                  className={`relative border-2 border-pencil pl-14 sm:pl-16 md:pl-20 pr-4 sm:pr-5 md:pr-6 py-1.5 sm:py-2 md:py-2.5 ${bubbleBg[i]} w-full min-w-0 overflow-visible text-left min-h-[4.5rem] sm:min-h-[5rem] flex items-center`}
+                  style={{
+                    borderRadius: '240px 20px 220px 20px / 20px 220px 20px 240px',
+                    boxShadow: '3px 3px 0px 0px rgba(45,45,45,0.12)',
+                  }}
+                >
+                  <img
+                    src={plantAssets[i]}
+                    alt=""
+                    aria-hidden
+                    className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 object-contain pointer-events-none z-10"
+                  />
+                  <span className="relative z-0 font-body text-xs sm:text-sm md:text-base text-pencil/90 text-left leading-snug">{texts[i]}</span>
+                </div>
+              );
+              return (
+                <div className="grid grid-cols-2 gap-x-10 gap-y-3 sm:gap-x-12 sm:gap-y-4 md:gap-x-16">
+                  {renderBubble(0)}
+                  {renderBubble(1)}
+                  {renderBubble(2)}
+                  {renderBubble(3)}
+                </div>
+              );
+            })()}
+          </div>
         </div>
       </section>
 
       {/* FAQ — one section, full-width radial gradient bg */}
       <section
         className="w-full"
-        style={{ background: 'radial-gradient(ellipse at center, #FBF5E4 0%, #FCF8FE 39%, #FBF5E4 100%)' }}
+        style={{ background: 'radial-gradient(ellipse 120vmin 72vmin at center, #EDDCFB 0%, #FFFFFF 39%, #F3D3DB 100%)' }}
         aria-labelledby="faq-heading"
       >
         <div className="max-w-5xl mx-auto px-4 sm:px-5 md:px-6 py-12 sm:py-16 md:py-20">
