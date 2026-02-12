@@ -1,27 +1,7 @@
-import path from 'path';
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { reactRouter } from "@react-router/dev/vite";
+import { defineConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  root: '.',
-  base: process.env.VITE_BASE_PATH || '/',
-  server: {
-    host: true,
-    port: 5173,
-    strictPort: false,
-  },
-  preview: {
-    host: true,
-    port: 5173,
-    strictPort: false,
-  },
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
-  build: {
-    outDir: 'dist',
-  },
+  plugins: [reactRouter(), tsconfigPaths()],
 });

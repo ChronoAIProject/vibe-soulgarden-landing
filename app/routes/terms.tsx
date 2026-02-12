@@ -1,7 +1,13 @@
-import { Link } from 'react-router-dom';
-import { termsContent } from '../termsContent';
+import { Link } from "react-router";
+import { termsContent } from "../termsContent";
+import type { MetaFunction } from "react-router";
 
-export function TermsPage() {
+export const meta: MetaFunction = () => [
+  { title: "Terms of Use | SoulGarden" },
+  { name: "description", content: "SoulGarden Terms of Service" },
+];
+
+export default function TermsPage() {
   return (
     <div className="min-h-screen font-body text-pencil min-w-0 bg-[#FBF5E4]">
       <div className="max-w-3xl mx-auto px-4 sm:px-5 md:px-6 py-8 sm:py-10 md:py-12">

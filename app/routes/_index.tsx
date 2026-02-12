@@ -1,14 +1,40 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from './components/Button';
-import { Card } from './components/Card';
-import { LoadingPage } from './components/LoadingPage';
-import { ArrowRight } from 'lucide-react';
-import { SiInstagram, SiPinterest, SiTiktok } from 'react-icons/si';
+import { useState, useEffect } from "react";
+import { Link } from "react-router";
+import { Button } from "../components/Button";
+import { Card } from "../components/Card";
+import { LoadingPage } from "../components/LoadingPage";
+import { ArrowRight } from "lucide-react";
+import { SiInstagram, SiPinterest, SiTiktok } from "react-icons/si";
+import type { MetaFunction } from "react-router";
 
 const LOADING_DURATION_MS = 1500;
 
-export default function App() {
+export const meta: MetaFunction = () => [
+  { title: "SoulGarden" },
+  {
+    name: "description",
+    content:
+      "Manifestation, but not as a chore. Turn your affirmations into personalized magical AI plants that grow through 2 minute daily affirmation rituals that feel like play, not work.",
+  },
+  { property: "og:type", content: "website" },
+  { property: "og:title", content: "SoulGarden" },
+  {
+    property: "og:description",
+    content:
+      "Manifestation, but not as a chore. Turn your affirmations into personalized magical AI plants that grow through 2 minute daily affirmation rituals that feel like play, not work.",
+  },
+  { property: "og:image", content: "/Social_img.png" },
+  { name: "twitter:card", content: "summary_large_image" },
+  { name: "twitter:title", content: "SoulGarden" },
+  {
+    name: "twitter:description",
+    content:
+      "Manifestation, but not as a chore. Turn your affirmations into personalized magical AI plants that grow through 2 minute daily affirmation rituals that feel like play, not work.",
+  },
+  { name: "twitter:image", content: "/Social_img.png" },
+];
+
+export default function HomePage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -307,7 +333,7 @@ export default function App() {
             },
             {
               q: 'How does the daily practice work?',
-              a: 'Use the home screen widget for quick access. Each day you read your AI-generated affirmation and “Hold to Manifest” to water your plant. Sessions are short and visual so practice feels like play, not work. No long-form writing or extended meditation required.',
+              a: 'Use the home screen widget for quick access. Each day you read your AI-generated affirmation and "Hold to Manifest" to water your plant. Sessions are short and visual so practice feels like play, not work. No long-form writing or extended meditation required.',
             },
             {
               q: 'Are the plants really unique?',
