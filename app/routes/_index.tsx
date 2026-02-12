@@ -81,7 +81,7 @@ export default function HomePage() {
                 <SiPinterest className="h-5 w-5 sm:h-5 sm:w-5" aria-hidden />
               </a>
             </div>
-            <Button variant="primary" href="#get-started" className="animate-nav-cta-pulse">
+            <Button variant="primary" href="#get-started" className="animate-nav-cta-shake">
               Get started
             </Button>
           </nav>
@@ -119,7 +119,7 @@ export default function HomePage() {
           <div className="flex justify-center w-full md:w-auto shrink-0">
             <img
               src="/Phone_mocks/Phone_hero.png"
-              alt="SoulGarden app on phone — plant a seed of intention"
+              alt="SoulGarden app on phone, plant a seed of intention"
               className="h-[320px] sm:h-[400px] md:h-[480px] lg:h-[560px] xl:h-[620px] w-auto max-h-[70vh] object-contain animate-plant-float"
             />
           </div>
@@ -170,7 +170,7 @@ export default function HomePage() {
             <Card decoration="tack" tint="roseAccent" rotate={-1} className="w-full max-w-md">
               <h3 className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-pencil mb-3 sm:mb-4">Unlimited plant variation</h3>
               <p className="font-body text-base sm:text-lg md:text-xl text-pencil/80 leading-relaxed">
-                <strong className="font-bold text-pencil/90">Your manifestation is sent out to the universe.</strong> Each manifestation becomes a unique, collectible plant that grows through daily personalized affirmations. We promise every plant is one-of-a-kind—uniquely yours, no repeats! Don&apos;t believe us? Share it with your friends and see!
+                <strong className="font-bold text-pencil/90">Your manifestation is sent out to the universe.</strong> Each manifestation becomes a unique, collectible plant that grows through daily personalized affirmations. We promise every plant is one-of-a-kind, uniquely yours, no repeats! Don&apos;t believe us? Share it with your friends and see!
               </p>
             </Card>
           </div>
@@ -226,7 +226,7 @@ export default function HomePage() {
                 *Pro Tip: Be Delusional
               </p>
             </Card>
-            <Card decoration="tape" tint="roseAccent" rotate={-1}>
+            <Card decoration="pin" tint="roseAccent" rotate={-1}>
               <div className="flex justify-center mb-3 sm:mb-4">
                 <img src="/Plant_assets/sproutling.png" alt="Sprout" className="h-20 sm:h-24 md:h-28 w-auto object-contain" />
               </div>
@@ -397,8 +397,8 @@ export default function HomePage() {
               Plant a seed of intention today.
             </p>
             <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6">
-              <a href="#" className="font-body text-sm sm:text-base text-pencil/70 hover:text-brand-roseAccent underline decoration-2 underline-offset-2 min-h-[44px] inline-flex items-center touch-manipulation">Privacy</a>
-              <Link to="/terms/" className="font-body text-sm sm:text-base text-pencil/70 hover:text-brand-lightBlue underline decoration-2 underline-offset-2 min-h-[44px] inline-flex items-center touch-manipulation">Terms</Link>
+              <Link to="/privacy" className="font-body text-sm sm:text-base text-pencil/70 hover:text-brand-roseAccent underline decoration-2 underline-offset-2 min-h-[44px] inline-flex items-center touch-manipulation">Privacy</Link>
+              <Link to="/terms" className="font-body text-sm sm:text-base text-pencil/70 hover:text-brand-lightBlue underline decoration-2 underline-offset-2 min-h-[44px] inline-flex items-center touch-manipulation">Terms</Link>
             </div>
           </div>
           </footer>
