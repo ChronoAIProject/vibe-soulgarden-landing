@@ -398,7 +398,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6">
               <a href="#" className="font-body text-sm sm:text-base text-pencil/70 hover:text-brand-roseAccent underline decoration-2 underline-offset-2 min-h-[44px] inline-flex items-center touch-manipulation">Privacy</a>
-              <Link to="/terms" className="font-body text-sm sm:text-base text-pencil/70 hover:text-brand-lightBlue underline decoration-2 underline-offset-2 min-h-[44px] inline-flex items-center touch-manipulation">Terms</Link>
+              <Link to="/terms/" className="font-body text-sm sm:text-base text-pencil/70 hover:text-brand-lightBlue underline decoration-2 underline-offset-2 min-h-[44px] inline-flex items-center touch-manipulation">Terms</Link>
             </div>
           </div>
           </footer>
