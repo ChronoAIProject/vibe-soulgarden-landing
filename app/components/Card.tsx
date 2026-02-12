@@ -36,11 +36,21 @@ export function Card({
   }[rotate];
 
   const isPinOrTape = decoration === 'pin' || decoration === 'tape';
+  
+  // Calculate hover rotation based on initial rotation
+  const hoverRotation = {
+    0: 'hover:-rotate-1',
+    1: 'hover:rotate-0',
+    2: 'hover:rotate-1',
+    '-1': 'hover:-rotate-2',
+    '-2': 'hover:-rotate-1',
+  }[rotate];
+  
   return (
     <div
       className={`
         relative p-4 sm:p-6 md:p-8
-        transition-transform duration-100 hover:-rotate-1
+        transition-transform duration-100 ${hoverRotation}
         ${isPinOrTape ? 'border-[3px] border-pencil' : 'border-2 border-pencil'}
         ${tintBg[tint]} ${rotation} ${className}
       `}
