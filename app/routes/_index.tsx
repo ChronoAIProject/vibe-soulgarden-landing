@@ -360,10 +360,10 @@ export default function HomePage() {
 
       {/* Final CTA + Footer — full width, single bg image */}
       <div
-        className="flex w-full flex-col bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/cta_meadow_wide.png)' }}
+        className="flex w-full flex-col bg-cover bg-center bg-no-repeat relative min-h-screen"
+        style={{ backgroundImage: 'url(/cta_meadow_wide.png)', backgroundPosition: 'center bottom', backgroundSize: 'cover' }}
       >
-        <section id="get-started" className="flex w-full flex-col items-center justify-center px-4 sm:px-5 md:px-6 py-32 sm:py-40 md:py-48 lg:py-60">
+        <section id="get-started" className="flex w-full flex-col items-center justify-center px-4 sm:px-5 md:px-6 py-32 sm:py-40 md:py-48 lg:py-60 relative z-10">
           <div className="mx-auto max-w-5xl text-center">
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-pencil">
               Your first magical plant is waiting.
@@ -381,22 +381,22 @@ export default function HomePage() {
         </section>
 
         {/* Footer — bubble style, responsive width within equal side margins, bottom padding */}
-        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pb-4 sm:pb-6 md:pb-8">
+        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pb-4 sm:pb-6 md:pb-8 relative z-10 mt-auto">
           <footer
-            className="w-full relative border-2 border-pencil p-4 sm:p-5 md:p-6 bg-brand-creamAccent"
+            className="w-full relative border-2 border-pencil p-4 sm:p-5 md:p-6 bg-brand-creamAccent z-10"
             style={{
               borderRadius: '240px 20px 220px 20px / 20px 220px 20px 240px',
               boxShadow: '3px 3px 0px 0px rgba(45,45,45,0.12)',
             }}
           >
-          <div className="w-full px-4 sm:px-6 md:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="w-full px-4 sm:px-6 md:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
             <a href="#" className="flex items-center shrink-0 min-h-[44px] items-center" aria-label="SoulGarden home">
               <img src="/WordMark_Chrome.png" alt="SoulGarden" className="h-5 sm:h-6 md:h-7 w-auto object-contain" />
             </a>
-            <p className="font-body text-xs sm:text-sm text-pencil/60 text-center sm:text-right max-w-md">
+            <p className="font-body text-xs sm:text-sm text-pencil/60 text-center sm:text-left flex-1 max-w-md mx-auto sm:mx-0">
               Plant a seed of intention today.
             </p>
-            <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6">
+            <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6 shrink-0">
               <Link to="/privacy" className="font-body text-sm sm:text-base text-pencil/70 hover:text-brand-roseAccent underline decoration-2 underline-offset-2 min-h-[44px] inline-flex items-center touch-manipulation">Privacy</Link>
               <Link to="/terms" className="font-body text-sm sm:text-base text-pencil/70 hover:text-brand-lightBlue underline decoration-2 underline-offset-2 min-h-[44px] inline-flex items-center touch-manipulation">Terms</Link>
             </div>
