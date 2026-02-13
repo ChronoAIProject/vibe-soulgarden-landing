@@ -397,6 +397,7 @@ export default function HomePage() {
               Plant a seed of intention today.
             </p>
             <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6 shrink-0">
+              <Link to="/about" className="font-body text-sm sm:text-base text-pencil/70 hover:text-brand-lavender underline decoration-2 underline-offset-2 min-h-[44px] inline-flex items-center touch-manipulation">About</Link>
               <Link to="/privacy" className="font-body text-sm sm:text-base text-pencil/70 hover:text-brand-roseAccent underline decoration-2 underline-offset-2 min-h-[44px] inline-flex items-center touch-manipulation">Privacy</Link>
               <Link to="/terms" className="font-body text-sm sm:text-base text-pencil/70 hover:text-brand-lightBlue underline decoration-2 underline-offset-2 min-h-[44px] inline-flex items-center touch-manipulation">Terms</Link>
             </div>
