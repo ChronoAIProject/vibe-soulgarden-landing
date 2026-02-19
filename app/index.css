@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide React streaming hydration artifact ("$" text node) */
+body > script:last-of-type ~ :not(script) {
+  display: none;
+}
+
 /* Responsive root: clamp for fluid scaling; min 16px for readability on mobile */
 @layer base {
   html {
