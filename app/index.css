@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Hide React streaming hydration artifact ("$" text node) */
-body > script:last-of-type ~ :not(script) {
-  display: none;
+/* Hide stray text nodes (e.g. React hydration "$") directly in body */
+body {
+  font-size: 0;
+}
+body > * {
+  font-size: 1rem;
 }
 
 /* Responsive root: clamp for fluid scaling; min 16px for readability on mobile */
