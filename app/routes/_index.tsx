@@ -43,7 +43,7 @@ export default function HomePage() {
   }, []);
 
   const handleAppStoreRedirect = () => {
-    window.open("https://apps.apple.com/app/id6447848565", "_blank");
+    window.open("https://apps.apple.com/app/soulgarden/id6758030214", "_blank");
   }
 
   if (loading) {
