@@ -42,12 +42,16 @@ export default function HomePage() {
     return () => clearTimeout(t);
   }, []);
 
+  const handleAppStoreRedirect = () => {
+    window.open("https://apps.apple.com/app/id6447848565", "_blank");
+  }
+
   if (loading) {
     return <LoadingPage />;
   }
 
   return (
-    <div className="min-h-screen font-body text-pencil min-w-0 animate-fade-in">
+    <div className="min-h-screen font-body text-pencil min-w-0 animate-fade-in ">
       {/* Hero + Nav — full width bg encapsulates both */}
       <section
         className="relative w-full min-h-[70vh] sm:min-h-[75vh] md:min-h-[80vh] flex flex-col bg-cover bg-center bg-no-repeat"
@@ -81,7 +85,14 @@ export default function HomePage() {
                 <SiPinterest className="h-5 w-5 sm:h-5 sm:w-5" aria-hidden />
               </a>
             </div>
-            <Button variant="primary" href="#get-started" className="animate-nav-cta-shake">
+            <Button
+              variant="primary"
+              className="animate-nav-cta-shake"
+              onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                e.preventDefault();
+                document.getElementById('get-started')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Get started
             </Button>
           </nav>
@@ -107,11 +118,25 @@ export default function HomePage() {
               </p>
             </div>
             <div className="mt-5 sm:mt-7 md:mt-8 flex flex-wrap gap-3 sm:gap-4 md:gap-5">
-              <Button variant="primary" href="#get-started">
+              <Button
+                variant="primary"
+                href="#get-started"
+                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                  e.preventDefault();
+                  document.getElementById('get-started')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Start manifesting
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" strokeWidth={2.5} />
               </Button>
-              <Button variant="secondary" href="#how-it-works">
+              <Button
+                variant="secondary"
+                href="#how-it-works"
+                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                  e.preventDefault();
+                  document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 How it works
               </Button>
             </div>
@@ -372,7 +397,7 @@ export default function HomePage() {
               You&apos;ve been scrolling for a while. That energy could&apos;ve grown something beautiful by now.
             </p>
             <div className="mt-6 sm:mt-8 flex flex-wrap justify-center gap-3 sm:gap-4">
-              <Button variant="primary">
+              <Button onClick={handleAppStoreRedirect} variant="primary">
                 Download for free now
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" strokeWidth={2.5} />
               </Button>
